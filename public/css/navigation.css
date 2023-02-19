@@ -1,0 +1,147 @@
+/*==============================*/
+/*======Root Color==============*/
+/*==============================*/
+
+:root{
+    --s-first-color: #1b2326;
+    --s-second-color: #3a4f52;
+    --s-third-color: #10f5cc;
+    --s-white-color: #f5fefd;
+}
+
+/*==============================*/
+/*======All U Need==============*/
+/*==============================*/
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--s-first-color);
+}
+
+.s-menu-bar{
+    position: relative;
+    width: 70vw;
+    height: 70px;
+    background-color: var(--s-second-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/*==============================*/
+/*======All U Icon==============*/
+/*==============================*/
+
+.s-menu-bar .s-ul{
+    display: flex;
+    max-width: 468px;
+    padding: 0;
+}
+
+.s-menu-bar .s-ul .s-li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.s-menu-bar .s-ul .s-li .s-link{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.s-menu-bar .s-ul .s-li .s-link .s-icon::before{
+    position: relative;
+    line-height: 70px;
+    font-size: 1.5rem;
+    transition: .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    color: var(--s-white-color);
+}
+
+.s-menu-bar .s-ul .s-li.s-active .s-link .s-icon::before{
+    transform: translateY(-35px);
+    color: var(--s-first-color);
+}
+
+.s-menu-bar .s-ul .s-li .s-link span{
+    position: absolute;
+    color: var(--s-white-color);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: o.5em;
+    transition: .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    opacity: 0;
+    transform: translateY(20px);
+
+}
+
+.s-menu-bar .s-ul .s-li.s-active .s-link span{
+    transform: translateY(15px);
+    opacity: 1;
+}
+
+.s-menu-bar .s-ul .s-indicator{
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background-color: var(--s-third-color);
+    border-radius: 50%;
+    border: 6px solid var(--s-first-color);
+    transition: .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+}
+
+.s-menu-bar .s-ul .s-indicator::before{
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--s-first-color);
+    
+}
+
+.s-menu-bar .s-ul .s-indicator::after{
+    content: "";
+    position: absolute;
+    right: -22px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--s-first-color);
+    
+}
+
+
+.s-menu-bar .s-ul .s-li:nth-child(1).s-active~ .s-indicator{
+    transform: translateX(calc(70px * 0));
+}
+
+.s-menu-bar .s-ul .s-li:nth-child(2).s-active~ .s-indicator{
+    transform: translateX(calc(70px * 1));
+}
+.s-menu-bar .s-ul .s-li:nth-child(3).s-active~ .s-indicator{
+    transform: translateX(calc(70px * 2));
+}
+.s-menu-bar .s-ul .s-li:nth-child(4).s-active~ .s-indicator{
+    transform: translateX(calc(70px * 3));
+}
+.s-menu-bar .s-ul .s-li:nth-child(5).s-active~ .s-indicator{
+    transform: translateX(calc(70px * 4));
+}

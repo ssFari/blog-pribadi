@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+/*==============================*/
+/*======Root Color==============*/
+/*==============================*/
+
+:root{
+    --s-first-color: #1B2326;
+    --s-second-color: #3a4f52;
+    --s-third-color: #10f5cc;
+    --s-third-color-hover: #10f5cbab;
+    --s-white-color: #f5fefd;
+    --s-white-low-color: #969b9b;
+
+    --font-family: 'Montserrat', sans-serif;
+    --s-h-100vh: 100vh;
+    --s-h-auto: auto;
+
+
+    --main-title: calc(1.5rem + 1.5vw);
+    --second-title: calc(.75rem + 1.5vw);
+    --text-title: calc(.5rem + 1.5vw);
+}
+
+@media only screen and (min-width: 567px) {
+    :root{
+        --main-title: calc(1.5rem + 1.5vw);
+    }
+}
+
+
+@media only screen and (min-width: 968px) {
+    :root{
+        --main-title: 3.5rem;
+        --second-title: 1.75rem;
+        --text-title: 1rem
+        
+    }
+}
+
+/*==============================*/
+/*======All U Need==============*/
+/*==============================*/
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--s-first-color);
+    font-family: var(--font-family);
+    color: var(--s-white-color);
+}
+
+section{
+    height: 100vh;
+}
+
+/*=================================*/
+/*======Halaman Utama==============*/
+/*=================================*/
+
+.s-main-latar{
+    position: absolute;
+    top: 0;
+    height: calc(100% - 1.5vh);
+    width: 100vw;
+    overflow: hidden;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='69.283' height='40' patternTransform='scale(4) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(196, 17%, 13%, 1)'/><path d='M46.189-20L57.736 0M46.189 20l11.547 20m-46.189 0l11.547 20M11.547 0l11.547 20m40.415 30H40.415M28.868 30H5.774m23.094-40H5.774m57.735 20H40.415m0 20L28.868 50m11.547-60L28.868 10m46.188 0L63.509 30M5.774 10L-5.773 30m75.056 10H46.189L34.64 20 46.19 0h23.094C73.13 6.667 76.98 13.333 80.83 20zM57.736 60H34.64L23.094 40l11.547-20h23.095c3.848 6.667 7.698 13.333 11.547 20L57.736 60zm0-40H34.64L23.094 0l11.547-20h23.095L69.283 0c-3.87 6.7-8.118 14.06-11.547 20zM34.64 60H11.547L0 40l11.547-20h23.094L46.19 40 34.64 60zm0-40H11.547L0 0l11.547-20h23.094L46.19 0 34.64 20zM23.094 40H0l-5.773-10-5.774-10L0 0h23.094l11.547 20-11.547 20z'  stroke-width='1' stroke='hsla(188, 17%, 27%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-336,-260)' fill='url(%23a)'/></svg>");
+    background-size: auto;
+    background-color: var(--s-first-color);
+    box-shadow: inset 0 -500px 1000px var(--s-first-color);
+    border-radius: 0 0 50% 50%;
+    z-index: 0;
+}
+
+.s-main{
+    background: transparent;
+    z-index: 1;
+}
+
+.s-main .s-main-title{
+    font-size: var(--main-title);
+    text-align: center;
+}
+
+.s-main .s-second-title{
+    text-align: center;
+    font-size: var(--text-title);
+    font-weight: 500;
+    color: var(--s-white-low-color);
+    
+}
+
+.s-main .s-main-title .title-gradient{
+    background: linear-gradient(125deg, var(--s-second-color), var(--s-third-color));
+    background: -webkit-linear-gradient(125deg, var(--s-second-color), var(--s-third-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.s-action .s-btn-fill{
+    font-size: var(--text-title);
+    background-color: var(--s-third-color-hover);
+    border: none;
+    color:var(--s-white-color);
+    transition: .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.s-action .s-btn-fill:hover{
+    color:var(--s-second-color);
+    background-color: var(--s-third-color);
+}
+
+.s-action .s-btn-outline{
+    font-size: var(--text-title);
+    border: 1px solid var(--s-third-color-hover);
+    color: var(--s-white-color);
+    transition: .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.s-action .s-btn-outline:hover{
+    border: 1px solid var(--s-third-color);
+    background-color: var(--s-third-color);
+    color:var(--s-second-color);
+}

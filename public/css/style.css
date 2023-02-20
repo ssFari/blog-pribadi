@@ -21,11 +21,16 @@
     --main-title: calc(1.5rem + 1.5vw);
     --second-title: calc(.75rem + 1.5vw);
     --text-title: calc(.5rem + 1.5vw);
+
+
+    --width: calc(100vw - 20px);
 }
 
 @media only screen and (min-width: 567px) {
     :root{
         --main-title: calc(1.5rem + 1.5vw);
+        --width: 100%;
+
     }
 }
 
@@ -105,6 +110,11 @@ section{
     transition: .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
+.s-action .s-btn-fill .s-icon{
+    font-size: var(--text-title);
+    padding-left: 10px;
+}
+
 .s-action .s-btn-fill:hover{
     color:var(--s-second-color);
     background-color: var(--s-third-color);
@@ -121,4 +131,91 @@ section{
     border: 1px solid var(--s-third-color);
     background-color: var(--s-third-color);
     color:var(--s-second-color);
+}
+
+/*=================================*/
+/*======Navigasi Menu==============*/
+/*=================================*/
+
+.s-navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: var(--width);
+    max-width: fit-content;
+    height: 50px;
+
+    background-color: var(--s-second-color);
+    border-radius: 10px;
+
+    z-index: 1;
+}
+
+.s-ul{
+    height: 50px;
+    padding: 0 20px;
+}
+
+.s-ul .s-li .s-link{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.s-ul .s-li .s-link .s-icon{
+    position: relative;
+    border-radius: 7px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: var(--second-title);
+    color: var(--s-white-color);
+    font-weight: 100;
+    transition: .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.s-ul .s-li:hover .s-link .s-icon{
+    background-color: var(--s-white-low-color);
+
+} 
+
+.s-ul .s-li.s-active .s-link .s-icon{
+    transform: translateY(-25px);
+    background: #10f5cbb0;
+    box-shadow: 0px 10px 30px rgba(201, 201, 201, 0.3);   
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.s-ul .s-li.s-active .s-link{
+    opacity: 1;
+}
+
+.s-ul .s-li{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin: 0 5px;
+}
+
+.s-navigation .s-ul .s-li .s-link span{
+    position: absolute;
+    color: var(--s-white-color);
+    font-weight: 400;
+    font-size: var(--text-title);
+    letter-spacing: o.5em;
+    transition: .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    opacity: 0;
+    transform: translateY(20px);
+
+}
+
+.s-navigation .s-ul .s-li.s-active .s-link span{
+    transform: translateY(15px);
+    opacity: 1;
 }

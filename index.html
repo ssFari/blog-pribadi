@@ -8,12 +8,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:display=swap" rel="stylesheet">
     <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="vendor/remixicon/fonts/remixicon.css">
     <link rel="stylesheet" href="public/css/style.css">
     <title>Dashboard</title>
 </head>
 <body class="d-flex h-100">
     <div class="wrapper">
+        <nav class="s-navigation">
+            <ul class="m-0 s-ul d-flex justify-content-around align-items-center">
+                <li class="d-flex flex-column align-items-center justify-content-center s-li s-active">
+                    <a href="#" class="s-link d-flex flex-column align-items-center justify-content-center ">
+                        <i class="ri-home-3-line s-icon"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="d-flex flex-column align-items-center justify-content-center s-li">
+                    <a href="#" class="s-link d-flex flex-column align-items-center justify-content-center ">
+                        <i class="ri-search-eye-line s-icon"></i>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li class="d-flex flex-column align-items-center justify-content-center s-li">
+                    <a href="#" class="s-link d-flex flex-column align-items-center justify-content-center ">
+                        <i class="ri-briefcase-4-line s-icon"></i>
+                        <span>Project</span>
+                    </a>
+                </li>
+                <li class="d-flex flex-column align-items-center justify-content-center s-li">
+                    <a href="#" class="s-link d-flex flex-column align-items-center justify-content-center ">
+                        <i class="ri-shopping-bag-3-line s-icon"></i>
+                        <span>Seller</span>
+                    </a>
+                </li>
+                <li class="d-flex flex-column align-items-center justify-content-center s-li">
+                    <a href="#" class="s-link d-flex flex-column align-items-center justify-content-center ">
+                        <i class="ri-user-smile-line s-icon"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
         <div class="container-fluid">
             <section class="d-flex justify-content-center align-items-center flex-column s-main-home">
                 <div class="s-main-latar">
@@ -23,11 +57,13 @@
                     <span class="m-1 s-second-title">A collection of designs that I created for you to use for personal or commercial use</span>
                 </div>
                 <div class="s-action z-1 m-2 d-flex justify-content-center">
-                    <a href="#" class="btn mx-3 px-3 py-2 s-btn-fill">Check This <i class="ps-2 bi bi-arrow-right s-icon"></i></a>
-                    <a href="#" class="btn mx-3 px-3 py-2 s-btn-outline">Subscribe Me</i></a>
+                    <a href="#" class="d-flex justify-content-center btn mx-3 px-3 py-2 s-btn-fill">Check This <i class="ri-arrow-right-s-line s-icon"></i></a>
+                    <a href="#" class="d-flex justify-content-center btn mx-3 px-3 py-2 s-btn-outline">Subscribe Me</i></a>
                 </div>
             </section>
         </div>
     </div>
+
+    <script src="public/js/main.js"></script>
 </body>
 </html>

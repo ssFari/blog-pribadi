@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/remixicon/fonts/remixicon.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/remixicon/fonts/remixicon.css">
     <link rel="stylesheet" href="public/css/style.css">
     <title>Dashboard</title>
 </head>
-<body class="d-flex h-100">
+
+<body class="d-flex h-100 overflow-x-hidden">
     <div class="wrapper">
-        <nav class="s-navigation">
+        <nav class="position-fixed s-navigation">
             <ul class="m-0 s-ul d-flex justify-content-around align-items-center">
                 <li class="d-flex flex-column align-items-center justify-content-center s-li s-active">
-                    <a href="#" class="s-link d-flex flex-column align-items-center justify-content-center ">
+                    <a href="#main-home" class="s-link d-flex flex-column align-items-center justify-content-center ">
                         <i class="ri-home-3-line s-icon"></i>
                         <span>Home</span>
                     </a>
@@ -29,7 +31,8 @@
                     </a>
                 </li>
                 <li class="d-flex flex-column align-items-center justify-content-center s-li">
-                    <a href="#" class="s-link d-flex flex-column align-items-center justify-content-center ">
+                    <a href="#main-project"
+                        class="s-link d-flex flex-column align-items-center justify-content-center ">
                         <i class="ri-briefcase-4-line s-icon"></i>
                         <span>Project</span>
                     </a>
@@ -48,38 +51,149 @@
                 </li>
             </ul>
         </nav>
-        <div class="container-fluid">
-            <section class="d-flex justify-content-center align-items-center flex-column s-main-home">
-                <div class="s-main-latar"></div>
-                <div class="s-top-bar d-flex align-items-center w-100 position-absolute">
-                    <div class="s-left position-relative">
-                        <a href="#" class="s-brand">
-                            <span>sUI</span>me
-                        </a>
-                    </div>
-                    <div class="s-right position-relative d-flex">
-                        <div class="s-item d-flex align-items-center fs-4">
-                            <div class="s-users d-flex align-items-center px-3 mx-2">
+
+        <!--========================================-->
+        <!--=============Home section===============-->
+        <!--========================================-->
+
+        <section id="main-home" class="d-flex justify-content-center align-items-center flex-column s-main-home">
+            <div class="s-main-latar"></div>
+            <div class="s-top-bar d-flex align-items-center w-100 position-absolute">
+                <div class="s-left position-relative">
+                    <a href="#" class="s-brand">
+                        <span>sUI</span>me
+                    </a>
+                </div>
+                <div class="s-right position-relative d-flex">
+                    <div class="s-item d-flex align-items-center fs-4">
+                        <div class="s-users d-flex align-items-center px-3 mx-2">
+                            <div class="s-users-info">
                                 <i class="ri-team-line px-1 s-icon"></i>
-                                <span class="px-2 fs-5 fw-bold">+100</span>
+                                <span class="px-2 fs-4 fw-bold">+100</span>
                             </div>
-                            <div class="s-notif">
+                            <div class="s-users-info-hover position-absolute" data-bs-theme=dark>
+                                <ul class="list-group">
+                                    <li
+                                        class="list-group-item s-li border-0 d-flex justify-content-between align-items-center fs-5">
+                                        109 users
+                                        <span class="badge bg-success rounded-pill">Online</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="s-notif mx-2">
+                            <button type="button" class="s-btn-transparant" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
                                 <i class="ri-notification-3-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="m-2 s-main d-flex justify-content-center align-items-center flex-column">
+                <span class="m-1 fw-semibold s-main-title">Welcome to <span class="title-gradient">sUI</span></span>
+                <span class="m-1 s-second-title">A collection of designs that I created for you to use for personal
+                    or commercial use</span>
+            </div>
+            <div class="s-action z-1 m-2 d-flex justify-content-center">
+                <a href="#" class="d-flex justify-content-center btn mx-3 px-3 py-2 s-btn-fill">Check This <i
+                        class="ri-arrow-right-s-line s-icon"></i></a>
+                <a href="#" class="d-flex justify-content-center btn mx-3 px-3 py-2 s-btn-outline">Subscribe
+                    Me</i></a>
+            </div>
+            <div class="s-modal" data-bs-theme=dark>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Notification</h1>
+                                <button type="button" class="btn-close s-btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item border-0 list-group-item-action active"
+                                        aria-current="true">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some small print.</small>
+                                    </a>
+                                    <a href="#" class="list-group-item border-0 list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small class="text-muted">And some muted small print.</small>
+                                    </a>
+                                    <a href="#" class="list-group-item border-0 list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small class="text-muted">And some muted small print.</small>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="m-2 s-main d-flex justify-content-center align-items-center flex-column">
-                    <span class="m-1 fw-semibold s-main-title">Welcome to <span class="title-gradient">sUI</span></span>
-                    <span class="m-1 s-second-title">A collection of designs that I created for you to use for personal or commercial use</span>
+            </div>
+        </section>
+
+        <!--========================================-->
+        <!--============================-->
+        <!--========================================-->
+
+        <section id="main-project" class="s-main-project container pt-5">
+            <div class="s-category d-flex align-items-center">
+                <div class="s-title d-flex justify-content-center align-items-center px-3">
+                    <span>category :</span>
                 </div>
-                <div class="s-action z-1 m-2 d-flex justify-content-center">
-                    <a href="#" class="d-flex justify-content-center btn mx-3 px-3 py-2 s-btn-fill">Check This <i class="ri-arrow-right-s-line s-icon"></i></a>
-                    <a href="#" class="d-flex justify-content-center btn mx-3 px-3 py-2 s-btn-outline">Subscribe Me</i></a>
+                <ul class="s-ul m-0 p-0 px-4 d-flex align-items-center">
+                    <li class="s-li s-active">
+                        <span>
+                            All
+                        </span>
+                    </li>
+                    <li class="s-li">
+                        <span>
+                            Dashboard
+                        </span>
+                    </li>
+                    <li class="s-li">
+                        <span>
+                            Landing Page
+                        </span>
+                    </li>
+                    <li class="s-li">
+                        <span>
+                            Personal Page
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="s-item-category">
+                <div class="s-ul">
+                    <div class="sli">
+                        <a href="" class="s-link-card">
+                            <img src="public/asset/img/1313.png" class="s-img-card" alt="">
+                        </a>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
+        
     </div>
+    <script src="vendor/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="public/js/main.js"></script>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-const menuItems = document.querySelectorAll('.s-li');
+const menuItems = document.querySelectorAll('.s-navigation .s-ul .s-li');
 
 menuItems.forEach(item => {
   item.addEventListener('click', () => {
